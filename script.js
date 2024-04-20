@@ -395,7 +395,10 @@ var tl2 = gsap.timeline({
   scrollTrigger: {
     scroller: "#main",
     trigger: "#page4tellmemoere",
-    start: "top 70%",
+    start: "top 20%",
+    end:"top -20%",
+    scrub: true,
+
   },
 });
 tl2.from(".tell svg", {
