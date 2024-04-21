@@ -365,7 +365,7 @@ tl.from("#page3textbox .Title__dots", {
 },"pl");
 
 
-gsap.from("#item1", {
+gsap.from(".item1", {
   y: 300,
   rotate:10,
   stagger: 0.2,
@@ -375,7 +375,7 @@ gsap.from("#item1", {
     start: "top 70%"
   },
 });
-gsap.from("#item1 #itemkaphotu", {
+gsap.from(".item1 #itemkaphotu", {
   y: 200,
   stagger: 0.4,
 
