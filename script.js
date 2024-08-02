@@ -33,9 +33,7 @@ ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
 
 }
-
 init()
-
 
  var images = document.querySelectorAll(".image-container img");
  var index = 0;
@@ -56,7 +54,7 @@ var wanttoin = document.querySelector(".wanttoin")
 var wanttoout = document.querySelector(".wanttoout")
 var navpagemobile = document.querySelector("#navpagemobile")
 
-wanttoin.addEventListener("click",function(){
+wanttoin.addEventListener("click",function(){  
   navpagemobile.style.display = "block";
   wanttoin.style.display = "none";
   wanttoout.style.display = "block";
@@ -302,7 +300,6 @@ gsap.from("#bottomcontainer1", {
 gsap.from("#bottomcontainer2", {
   y: 200,
   opacity: 0,
-
   scrollTrigger: {
     scroller: "#main",
     trigger: "#bottomcontainer2",
@@ -334,6 +331,7 @@ var tl = gsap.timeline({
   scrollTrigger: {
     scroller: "#main",
     trigger: "#page3textbox",
+    
     start: "100% 80%",
     end: "100% 50%",
     scrub: true,

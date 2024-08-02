@@ -34,21 +34,19 @@ body{
 }
 #navkeandarkeitem{
     width: 100%;
+    height: 30px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-left: 10vw;
-    gap: 6vw;
+    /* padding-left: 10vw;
+    padding-right: 10vw; */
+    gap: 10vw;
 }
 #nav  h4{
+    white-space: nowrap;
     font-size: 15px;
     cursor: pointer;
 }
-#nav  h5{
-    font-size: 15px;
-    text-transform: uppercase;
-
-}
-
 .dots{
     pointer-events: none;
     position: absolute;
@@ -64,38 +62,26 @@ body{
 .dots svg{
     scale: 0;
     transition: all ease-in-out 0.2s;
-
 }
-
-#navitem1{
+.navitem{
+    height: 30px;
     position: relative;
 }
 .navitem:hover .dots svg{
-    scale: 1;
-    
-}
-#navitem3{
-    position: relative;
-    margin-left: 20vw;
-}
-#navitem1 .dots{
-    width: 130%;
+    scale: 1;  
 }
 #navitem2{
-    position: relative;
+    margin-right: 20vw;
 }
 #nichekadabba{
     position: absolute;
-    /* display: none; */
+    display: none;
     fill: white;
     left: -30px;
-    top: 160%;
-    opacity: 0;
-    pointer-events: none;
-    
+    top: 100%;  
 }
 #navitem2:hover #nichekadabba{
-    opacity: 1;
+    display: block;
 }
 #nichekadabbatext{
     width: 200px;
@@ -108,30 +94,28 @@ body{
     font-size: 16px;
     text-align: center;
     line-height: 25px;
-}
-#navitem4{
-    position: relative;
+    cursor: pointer;
 }
 #nichekadabba2{
     position: absolute;
-    /* display: none; */
+    display: none;
     fill: white;
     left: -30px;
-    top: 160%;
-    visibility: hidden;
+    top: 100%;
 }
 
 #navitem4:hover #nichekadabba2{
-    visibility: visible;
+    display: block;
 }
+
 .navclick{
-   
-        display: none;
-    }
+    display: none;
+}
 #navpagemobile{
     display: none;
-
 }
+
+
 #navpagemobileinner{
     width: 100vw;
     height: 100vh;
@@ -142,10 +126,11 @@ body{
     gap: 50px;
     color: white;
 }
-#navpagemobileinner .navitem{
-    /* position: absolute; */
+#navc{
+    display: none;
 }
-@media (max-width:600px) {
+
+@media (max-width:1000px) {
     
     #navkeandarkeitem{
      display: none;
@@ -156,8 +141,7 @@ body{
     .navclick{
         position: absolute;
         display: inline;    
-        right: 20px;
-        
+        right: 20px; 
     }
     .wanttoout{
         display: none;
@@ -170,8 +154,8 @@ body{
         z-index: 999;
         background-color: #000000;        
     }
-    #navitem3{
-        margin-left: 0;
+    #navitem2{
+        margin-right: 0;
     }
     .dots svg{
         fill: white;
@@ -180,7 +164,14 @@ body{
     #nichekadabbatext h5{
         color: #000000;
     }
-
+    h4{
+        cursor: pointer;
+    }
+    #navc{
+        display: block;
+        width: 100vw;
+        height: 30px;
+    }
 
 }
 .Header__bg{
@@ -335,22 +326,11 @@ body{
     animation-timing-function: linear;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    
-   
 }
 @keyframes thridchicken {
-    0%{
-    transform: rotate(-30deg);
-
-    }
-    50%{
-      transform: rotate(-40deg);
-
-    }
-    100%{
-    transform: rotate(-30deg);
-
-    }
+    0%{transform: rotate(-30deg);}
+    50%{transform: rotate(-40deg);}
+    100%{transform: rotate(-30deg);}
 }
 #fourthcontainer{
     width: 400px;
@@ -366,36 +346,36 @@ body{
 }
 #fourthcontainer h1{
     font-size: 70px;
-    
-
 }
 #fourthcontainer h4{
     font-size: 30px;
     position: absolute;
-     position: absolute;
-     top: 30%;
-     left: 50%;
-     transform: translate(-50%,-50%);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 #fourthcontainer img{
     width: 70%;
     height: 80px;
-     position: absolute;
-     top: 50%;
-     left: 12%;
-     transform: translate(-0%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translate(-0%,-50%);
 
 }
 #page1 #bottombackground{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: 85vh;
     width: 100vw;
     height: 120vh;
     background-image: url(./images/background_kraft_scratch-mobile.png);
     background-size: cover;
-
 }
-
 #bottombackground #leaf1{
     position: absolute;
     transform-origin: 50% 50%;
@@ -411,18 +391,22 @@ body{
 }
 #bottomcontainer1{
     width: 90%;
-     position: absolute;
-     top: 30%;
-     left: 50%;
-     transform: translate(-50%,0);
-     text-align: center;
+    height: 30vh;
+    text-align: center;
 }
 #bottomcontainer1 h1{
-    font-size: 40px;
+    font-size: 3vw;
     word-spacing: 5px;
+    text-align: center;
+}
+#bottomcontainer2 {
+    width: 80vw;
+    height: fit-content;
+    padding: 20px 0px;
+    text-align: center;        
 }
 #bottomcontainer2 h1{
-    font-size: 40px;
+    font-size: 3vw;
     word-spacing: 5px;
     position: relative;
 
@@ -430,39 +414,25 @@ body{
 #bottomcontainer2 h1 span{
     color: white;
 }
-
-
 #bottomcontainer2 #highlight{
-   width: 120%;
-   height: 60px;
+   width: 80vw;
+   height: 100%;
     position: absolute;
     z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-#bottomcontainer2{
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%,0);
-     text-align: center;
-}
 #bottomcontainer3{
+    height: 60px;
+    margin-top: 30px;
     text-align: center;
     font-size: 18px;
-     position: absolute;
-     top: 70%;
-     left: 50%;
-     transform: translate(-50%,0);
 }
 #bottomcontainer4{
     width: 200px;
     height: 70px;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%,0);
+    position: relative;
     cursor: pointer;
     z-index: 99;
 
@@ -470,19 +440,15 @@ body{
 #bottomcontainer4 h3{
     color: white;
     font-size: 25px;
-     position: absolute;
-     top: 40%;
-     left: 40%;
-     transform: translate(-50%,-50%);
-     z-index: 99;
-     
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%,-50%); 
+    z-index: 99;
 }
 
 #bottomcontainer4first{
-    position: absolute;
-    transform: translate(-10%,0);
     opacity: 0;
-
     z-index: 9;
     height: 60px;
     width: 30px;
@@ -495,8 +461,6 @@ body{
     height: 60px;
     width: 150px;
     transition: all ease 0.2s;
-
-
 }
 #bottomcontainer4:hover #bottomcontainer4first{
     transform: translate(0%,0);
@@ -504,10 +468,8 @@ body{
     opacity: 1;
 }
 #bottomcontainer4:hover #bottomcontainer4second{
-    /* transform: translate(50%,0); */
     width: 40px;
-    opacity: 0;
-    
+    opacity: 0;    
 }
 
 @media (max-width:600px) {
@@ -515,12 +477,12 @@ body{
         height: 10vh;
     }
     #page1 #bottombackground{
-    top: 80vh;
+        top: 80vh;
     }
     #firstchicken, #thirdchicken{
         display:none;
     }
-    #bottombackground img{
+    #bottombackground>img{
         height: 300px;
     }
     #bottombackground #leaf2{
@@ -529,28 +491,23 @@ body{
     .image-container img {
         scale: 0.7;
     }
-    #bottombackground h1{
-        font-size: 30px;
-        /* color: white; */
-    }
     #bottomcontainer2 {
-      width: 100%;
+      white-space: nowrap;
+      width: 100vw;
       top: 55%;
     }
-    #bottomcontainer2 #highlight {
-      width: 80%;
+    /* #bottomcontainer2 #highlight{
+        width: 80vw;
+    } */
+    #bottomcontainer2 h1 , #bottomcontainer1 h1{
+        font-size: 6vw;
     }
-
-    
-
-  
 }
 
 #page2{
     position: relative;
     width: 100vw;
     height: 100vh;
-    /* background-color: rgb(156, 152, 130); */
 }
 #page2background{
     position: absolute;
@@ -561,7 +518,7 @@ body{
 #page3{
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 900px;
     background-color: rgb(0, 0, 0);
    
 }
@@ -612,6 +569,7 @@ body{
 @media (max-width:600px) {
  #page3textbox{
     width: 60vw;
+    top: -10%;
  }    
  #page3textbox h1 {
     font-size: 30px;
@@ -1210,7 +1168,7 @@ body{
     width: 400px;
     height: 400px;
     /* background-color: #00000095; */
-     position: absolute;
+     position: relative;
      z-index: 10;
      top: -10%;
      left: 50%;
@@ -1264,13 +1222,17 @@ body{
 }
 #teethkenichekatext{
     font-size: 20px;
-    position: absolute;
+    position: relative;
     white-space: nowrap;
     z-index: 10;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,0);
     text-align: center;
+}
+#teethkenichekasvgparent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
 }
 #teethkenichekasvg{
     cursor: pointer;
@@ -1373,6 +1335,12 @@ body{
     height: 60vh;
     /* background-color: #c13a3a5b; */
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    /* padding-top: 100px ; */
     left: 50%;
     top: 50%;
     transform: translate(-50%,-80%);
@@ -1380,23 +1348,17 @@ body{
     /* background-color: #cf1515; */
 }
 #page7textbox h1{
+    white-space: nowrap;
     font-size: 40px;
     rotate: -3deg;
-    position: absolute;
-    top: 20%;
-    left: 20%;    
 }
 #page7textbox p{
     font-size: 18px;
-    position: absolute;
-    top: 40%;
-    left: 20%;   
     text-align: center;
-
 }
 #inp {
     position: relative;
-    top: 60%;
+    /* top: 60%; */
 }
 #inp #img1{
     width: 100%;
@@ -1408,7 +1370,6 @@ body{
     position: absolute;
     right: 20px;
     top: 10px;
-
 }
 #inp h2{
     pointer-events: none;
@@ -1417,47 +1378,49 @@ body{
     right: 70px;
     top: 20px;
 }
-#inp #img2:hover{
+#inp:hover #img2{
     rotate: -5deg;
 }
-
-input{
-    width: 30vw;
-    height: 50px;
-    position: absolute;
-    left: 10%;
-    top: 15px;
-    background: rgba(0, 0, 0, 0);
-    border: none;
+#inp:hover #img1{
+    rotate: 5deg;
 }
 #page7textbox h4{
-    position: absolute;
-    top: 80%;
-    left: 20%;
-
+    text-align: center;
 }
-@media (max-width:600px) {
+#page7textbox .Title{
+ position: relative;
+ left: 0;
+ top: 0;
+}
+
+/* @media (max-width:1000px){
     .leaf img{
-  
-    display: none;
-}  
-#page7textbox{
-    width: 100vw;
-    
-}
-#page7textbox h1, #page7textbox p{
-    font-size: 20px;
-}
-#page7textbox h4{
-    font-size: 10px;
-    top: 90%;
-}
+        scale: 0.5;
+    }    
+} */
+ @media (max-width:900px) {
+    .leaf img{
+        display: none;
+    } 
+ }
 
-
+@media (max-width:600px) {
+     
+    #page7textbox{
+        width: 100vw;
+        
+    }
+    #page7textbox h1, #page7textbox p{
+        font-size: 20px;
+    }
+    #page7textbox h4{
+        font-size: 10px;
+        top: 90%;
+    }
 }
 #page8{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     background-image: url(./images/background.jpg);
     
@@ -1469,7 +1432,7 @@ input{
     top: -35%;
 }
 #page8box1{
-    position: absolute;
+    position: relative;
     top: -10%;
     left: 0;
     width: 100%;
@@ -1513,7 +1476,7 @@ input{
     cursor: pointer;
 }
 .iconsvg{
-    fill: white;
+ fill: white;
  position: absolute;
  top: 50%;
  left: 50%;
@@ -1531,9 +1494,8 @@ input{
 
 #aboutus{
     
-    position: absolute;
-    top: 30%;
-  
+    position: relative;
+    /* top: 30%; */
      left: 50%;
      transform: translate(-50%,-30%);
     width: 800px;
@@ -1558,9 +1520,12 @@ input{
 .about h6{
     letter-spacing: 2px;
 }
+#page8box3 img{
+        scale: 0.5;
+    }
 
 #page8box3{
-    position: absolute;
+    position: relative;
      left: 50%;
      transform: translate(-50%,-20%);
     top: 50%;
@@ -1570,8 +1535,23 @@ input{
     justify-content: center;
     align-items: center;
     gap: 50px;
+
 }
 
+@media (max-width:600px) {
+    #aboutus{
+    font-size: 3vw;
+
+    }
+    #page8box3{
+        width: 100%;
+    }
+    
+    #page8box32{
+        display: none;
+    }
+    
+}
 #page8box32{
     height: 100%;
     width: 300px;
@@ -1581,7 +1561,7 @@ input{
     color: rgb(116, 177, 24);
 }
 #page8box4{
-    position: absolute;
+    position: relative;
     bottom: 100px;
      left: 50%;
      transform: translate(-50%,20%);
